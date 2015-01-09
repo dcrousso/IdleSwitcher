@@ -1,0 +1,10 @@
+{
+	"appName": {
+		"message": "IdleSwitcher",
+		"description": "Extension Name."
+	},
+	"appDescription": {
+		"message": "Auto-switches to a preset tab after the user becomes inactive.",
+		"description": "Extension Description."
+	}
+}
