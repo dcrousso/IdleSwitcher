@@ -13,7 +13,7 @@ function save_options() {
 }
 function restore_options() {
 	chrome.storage.sync.get({
-		"timeout": 900
+		"timeout": 15
 	}, function(items) {
 		document.getElementById('timeout').value = parseInt(items.timeout);
 	});
