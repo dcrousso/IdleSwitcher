@@ -10,6 +10,8 @@
 			#save { width: 240px; margin: 10px 0; padding: 7px 0; line-height: 20px; border: 0 none; border-radius: 2px; font-size: 12px; font-weight: bold; text-transform: none; background-color: #999; color: #fff; cursor: pointer; transition: background 0.3s ease 0s; -moz-transition: background 0.3s ease 0s; -ms-transition: background 0.3s ease 0s; -webkit-transition: background 0.3s ease 0s; }
 			#save:hover { background-color: #444; }
 			#status { opacity: 0; transition: opacity 0.75s ease 0s; -moz-transition: opacity 0.75s ease 0s; -ms-transition: opacity 0.75s ease 0s; -webkit-transition: opacity 0.75s ease 0s;}
+			#tabID { width: 247px; font-size: 16px; }
+			#tabID option:nth-child(even) { background: #ddd; }
 		</style>
 	</head>
 	<body>
@@ -17,7 +19,15 @@
 		<table id="settings">
 			<tr>
 				<td><span>Timeout (minutes)</span></td>
-				<td><input type="number" id="timeout" min="1" value="15"></td>
+				<td><input type="number" id="timeout" min="1"></td>
+			</tr>
+			<tr>
+				<td><span>Idle Tab</span></td>
+				<td>
+					<select id="tabID">
+						<option id="0" value="0">First Tab</option>
+					</select>
+				</td>
 			</tr>
 		</table>
 		<div id="update">
