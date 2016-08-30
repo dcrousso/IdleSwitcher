@@ -18,14 +18,12 @@ chrome.storage.onChanged.addListener(function(changes) {
 });
 chrome.idle.onStateChanged.addListener(function(newState) {
 	if(newState == "idle" || newState == "locked") {
-		chrome.tabs.get(tabID, function(tab) {
-			if(tabID == 0 || typeof(tab) == "undefined") {
-				chrome.tabs.query({index: 0}, function(tabs) {
-					chrome.tabs.update(tabs[0].id, {active: true, selected: true});
-				});
-			} else {
-				chrome.tabs.update(tabID, {active: true, selected: true});
-			}
-		});
+		if(tabID == 0) {
+			chrome.tabs.query({index:0}, function(tabs) {
+				chrome.tabs.update(tabs[0].id, {active: true, selected: true});
+			});
+		} else {
+			chrome.tabs.update(tabID, {active: true, selected: true});
+		}
 	}
 });
