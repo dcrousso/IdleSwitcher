@@ -4,7 +4,7 @@
 		"description": "Extension Name."
 	},
 	"appDescription": {
-		"message": "Auto-switches to a preset tab after the user becomes inactive.",
+		"message": "Auto-switches to a preset tab or cycle through tabs after the user becomes inactive.",
 		"description": "Extension Description."
 	}
 }
